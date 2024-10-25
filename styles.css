@@ -1,0 +1,111 @@
+/* Overall chat interface */
+#chat-interface {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 500px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Chat Box */
+  #chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f3f4f6;
+  }
+  
+  /* Message Bubbles */
+  .user, .bot {
+    max-width: 75%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    display: inline-block;
+    clear: both;
+  }
+  
+  .user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    border-radius: 20px 20px 0 20px;
+    float: right;
+  }
+  
+  .bot {
+    background-color: #e9ecef;
+    color: black;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0;
+    float: left;
+  }
+  
+  /* Input Field and Send Button */
+  .input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.95rem;
+    margin-right: 5px;
+  }
+  
+  #send-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+  }
+  
+  #send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Loading Indicator */
+  #loading-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .spinner {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ccc;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }  
