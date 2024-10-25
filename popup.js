@@ -17,7 +17,7 @@ document.getElementById("send-button").addEventListener("click", () => {
 
 // Function to call Gemini API
 async function generateContent(userInput, pageText) {
-  const apiKey = 'AIzaSyA8X22JbdILjrSzEzzH21I6RjwbyxcyNS4';  // Replace with your actual API key
+  const apiKey = '<YOUR_API_KEY>';  // Replace with your actual API key
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
   
